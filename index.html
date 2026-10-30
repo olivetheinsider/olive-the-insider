@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#596239">
+<meta name="description" content="Olive the Insider. Find Montreal food and drink deals by neighbourhood, day, time and category.">
+<title>Olive the Insider | Montreal food & drink deals</title>
+<style>
+:root{--paper:#f5f0e4;--cream:#fffcf5;--olive:#596239;--deep:#303b24;--muted:#657052;--line:#d9dbc7;--soft:#e9e9d5;--notice:#fff1cb;--notice-text:#705318}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--deep);font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.55}button,input,select{font:inherit}button,a,input,select{-webkit-tap-highlight-color:transparent}a{color:var(--olive)}button,a{touch-action:manipulation}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #9d6c2d;outline-offset:4px}[hidden]{display:none!important}.wrap{width:min(1120px,100% - 48px);margin:auto}.site-header{border-bottom:1px solid var(--line)}.header-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 0}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--deep)}.olive-mark{width:32px;height:38px;transform:rotate(28deg);border-radius:50%;background:var(--olive);display:inline-flex;align-items:center;justify-content:center;flex:none}.olive-mark:after{content:"";width:10px;height:15px;border-radius:50%;background:#c77948}.brand-name{font-family:Georgia,serif;font-size:24px;letter-spacing:-.5px}.brand-note{display:block;font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:var(--muted)}.button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 17px;border:1px solid var(--olive);border-radius:100px;background:transparent;color:var(--olive);text-decoration:none;font-size:14px;white-space:nowrap}.button:hover{background:var(--soft)}.hero{padding:52px 0 30px;max-width:780px}.eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:12px;color:var(--muted);margin:0 0 15px}h1{font:400 clamp(38px,6.8vw,68px)/1.08 Georgia,serif;letter-spacing:-2px;margin:0 0 18px}h1 em{font-weight:400;color:var(--olive)}.intro{color:var(--muted);margin:0;font-size:17px}.notice{padding:12px 16px;background:var(--notice);color:var(--notice-text);border-radius:10px;font-size:14px;margin:0 0 24px}.filters{background:var(--cream);border:1px solid var(--line);border-radius:18px;padding:22px}.search-field{display:block;margin-bottom:17px}.field-label{display:block;font-size:13px;font-weight:bold;margin-bottom:6px}input,select{width:100%;min-height:48px;padding:11px 13px;color:var(--deep);background:var(--cream);border:1px solid #b9bfa4;border-radius:8px}input::placeholder{color:#78806b}.filter-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.filter-bottom{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:16px;font-size:12px;color:var(--muted)}.clear{padding:8px 0;color:var(--olive);background:none;border:0;text-decoration:underline;min-height:40px}.results-header{display:flex;justify-content:space-between;align-items:center;gap:16px;margin:32px 0 16px}.results-header h2{font:400 25px Georgia,serif;margin:0}.results-count{font-size:13px;color:var(--muted)}.deals-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.deal-card{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:23px;display:flex;flex-direction:column;min-width:0}.card-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:16px}.category{font-size:11px;text-transform:uppercase;letter-spacing:1.1px;background:var(--soft);color:var(--olive);padding:5px 9px;border-radius:99px}.area{font-size:12px;color:var(--muted)}.deal-card h3{font-size:19px;font-weight:600;line-height:1.3;margin:0 0 7px}.deal-name{margin:0;color:var(--muted);font-size:14px}.price{font:400 30px Georgia,serif;color:var(--olive);margin:14px 0 18px}.details{margin:0;padding:15px 0 0;border-top:1px solid var(--line)}.detail{display:grid;grid-template-columns:48px 1fr;gap:8px;margin-bottom:8px;font-size:13px}.detail dt{color:var(--muted)}.detail dd{margin:0;overflow-wrap:anywhere}.conditions{font-size:12px;color:var(--muted);margin:9px 0 18px}.card-foot{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-top:auto;padding-top:14px;font-size:12px}.card-foot small{color:var(--muted);font-size:11px}.empty{padding:34px 20px;text-align:center;background:var(--cream);border:1px solid var(--line);border-radius:14px}.empty h3{font-family:Georgia,serif;font-size:24px;font-weight:400;margin:0 0 8px}.empty p{color:var(--muted);margin:0 0 15px}.site-footer{margin-top:55px;border-top:1px solid var(--line);padding:24px 0 30px;color:var(--muted);font-size:12px}.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-inner p{margin:0}.no-script{padding:20px;background:var(--notice)}@media(max-width:900px){.deals-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:620px){.wrap{width:calc(100% - 32px)}.brand-name{font-size:21px}.brand-note{font-size:9px}.header-inner{padding:17px 0}.header-inner .button{font-size:12px;padding:8px 11px}.hero{padding:34px 0 25px}h1{letter-spacing:-1px}.filters{padding:17px}.filter-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px 10px}.deals-grid{grid-template-columns:1fr}.filter-bottom{align-items:flex-start}.filter-bottom span{max-width:70%}.results-header{margin-top:25px}.deal-card{padding:21px}.footer-inner{display:block}.footer-inner p+p{margin-top:8px}}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="wrap header-inner"><a class="brand" href="./" aria-label="Olive the Insider home"><span class="olive-mark" aria-hidden="true"></span><span><span class="brand-name">Olive the Insider</span><span class="brand-note">Montreal food & drink deals</span></span></a><a id="submit-link" class="button" hidden target="_blank" rel="noopener noreferrer">Submit a deal ↗</a></div></header>
+<main class="wrap">
+<section class="hero" aria-labelledby="page-title"><p class="eyebrow">Good food. Better prices.</p><h1>Olive eats wherever<br><em>the deals are.</em></h1><p class="intro">Find your next bite by neighbourhood, day and time.</p></section>
+<p id="notice" class="notice" role="status">Loading deals…</p>
+<form id="filter-form" class="filters" aria-label="Search Montreal deals">
+<label class="search-field"><span class="field-label">What are you craving?</span><input id="search" type="search" placeholder="Search a restaurant, oysters, pizza…" autocomplete="off"></label>
+<div class="filter-grid">
+<label><span class="field-label">Neighbourhood</span><select id="area"><option value="">Anywhere in Montreal</option></select></label>
+<label><span class="field-label">Day</span><select id="day"><option value="">Any day</option><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option><option>Sunday</option></select></label>
+<label><span class="field-label">Time</span><input id="time" type="time" aria-describedby="time-hint"></label>
+<label><span class="field-label">Category</span><select id="category"><option value="">All deals</option></select></label>
+</div>
+<div class="filter-bottom"><span id="time-hint">Choose a day and time to find matching specials. Hours are Montreal local time.</span><button class="clear" type="reset">Clear filters</button></div>
+</form>
+<div class="results-header"><h2>Your next good deal</h2><span id="count" class="results-count" role="status" aria-live="polite"></span></div>
+<div id="results" class="deals-grid" aria-label="Matching deals"></div>
+<div id="empty" class="empty" hidden><h3>No deals match just yet.</h3><p>Try another day, time or neighbourhood.</p><button id="reset-empty" class="button" type="button">Clear filters</button></div>
+<div id="load-error" class="empty" hidden><h3>The deal list couldn’t load.</h3><p>Please try again in a moment.</p><button id="retry" class="button" type="button">Try again</button></div>
+<noscript><p class="no-script">Please enable JavaScript to search the directory.</p></noscript>
+</main>
+<footer class="site-footer"><div class="wrap footer-inner"><p>🫒 Olive the Insider · Montreal, QC</p><p>Deals can change. Check the conditions and confirm with the venue before going.</p></div></footer>
+
+<script id="deal-engine">
+// Data helpers. This page has no accounts, payments or paid dependencies.
+const DAY_NAMES=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+const fold=value=>String(value??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim();
+function parseCSV(text){
+ const rows=[];let row=[],field='',quoted=false;
+ for(let i=0;i<text.length;i++){
+  const c=text[i];
+  if(c==='"'){if(quoted&&text[i+1]==='"'){field+='"';i++;}else quoted=!quoted;}
+  else if(c===','&&!quoted){row.push(field);field='';}
+  else if((c==='\n'||c==='\r')&&!quoted){if(c==='\r'&&text[i+1]==='\n')i++;row.push(field);if(row.some(v=>v.trim()))rows.push(row);row=[];field='';}
+  else field+=c;
+ }
+ if(quoted)throw Error('Unclosed CSV quote');
+ row.push(field);if(row.some(v=>v.trim()))rows.push(row);
+ if(!rows.length)return [];
+ const heads=rows.shift().map(h=>fold(h.replace(/^\uFEFF/,'')));
+ for(const key of ['restaurant','category','deal','price','days','hours','neighbourhood','last checked'])if(!heads.includes(key))throw Error('Missing column: '+key);
+ return rows.map(r=>Object.fromEntries(heads.map((h,i)=>[h,r[i]??''])));
+}
+function parseDays(text){
+ const s=fold(text);if(/^(daily|every day|everyday|all days)$/.test(s))return [...DAY_NAMES];
+ if(s==='weekdays')return DAY_NAMES.slice(0,5);if(s==='weekends')return DAY_NAMES.slice(5);
+ const out=new Set(),parts=s.split(/[,;|/]|\band\b/);
+ const index=v=>DAY_NAMES.findIndex(d=>fold(d).startsWith(v.trim().slice(0,3))&&v.trim().length>=3);
+ for(const part of parts){const ends=part.trim().split(/\s*(?:–|—|-|\bto\b)\s*/);if(ends.length===2){const a=index(ends[0]),b=index(ends[1]);if(a>=0&&b>=0){let n=a;for(let j=0;j<7;j++){out.add(DAY_NAMES[n]);if(n===b)break;n=(n+1)%7;}}}else{const i=index(part);if(i>=0)out.add(DAY_NAMES[i]);}}
+ return [...out];
+}
+function parseClock(text,defaultSuffix=''){
+ const m=fold(text).replace(/\./g,'').match(/^(\d{1,2})(?::(\d{2}))?\s*(am|pm)?$/);if(!m)return null;
+ let h=Number(m[1]),min=Number(m[2]??0),suffix=m[3]||defaultSuffix;if(min>59)return null;
+ if(suffix){if(h<1||h>12)return null;h=h%12+(suffix==='pm'?12:0);}else if(h>23)return null;
+ return h*60+min;
+}
+function parseHours(text,start='',end=''){
+ if(start&&end){const a=parseClock(start),b=parseClock(end);return a===null||b===null?null:[a,b];}
+ if(/^(all day|24 hours|24h)$/i.test(text.trim()))return [0,1440];
+ const parts=text.replace(/\./g,'').split(/\s*(?:–|—|-|\bto\b)\s*/i);if(parts.length!==2)return null;
+ const suffix=parts[1].trim().toLowerCase().match(/(am|pm)$/)?.[1]??'';
+ const a=parseClock(parts[0].trim(),suffix),b=parseClock(parts[1].trim());return a===null||b===null?null:[a,b];
+}
+function normalizeDeal(r){return {restaurant:r.restaurant?.trim()??'',category:r.category?.trim()??'',deal:r.deal?.trim()??'',price:r.price?.trim()??'',days:parseDays(r.days??''),dayLabel:r.days?.trim()??'',hours:r.hours?.trim()??'',interval:parseHours(r.hours??'',r['start time']??'',r['end time']??''),area:r.neighbourhood?.trim()??'',checked:r['last checked']?.trim()??'',conditions:r.conditions?.trim()??'',address:r.address?.trim()||r['address / location']?.trim()||'',source:r['source url']?.trim()??'',status:r.status?.trim()??''};}
+function matchesDeal(d,f){
+ if(f.query&&!fold([d.restaurant,d.deal,d.category,d.area].join(' ')).includes(fold(f.query)))return false;
+ if(f.area&&d.area!==f.area)return false;if(f.category&&d.category!==f.category)return false;
+ if(f.time==='')return !f.day||d.days.includes(f.day);
+ const t=parseClock(f.time),hours=d.interval;if(t===null||!hours)return false;const [a,b]=hours;
+ if(b>a)return (!f.day||d.days.includes(f.day))&&t>=a&&t<b;
+ if(a===b)return false;
+ if(!f.day)return t>=a||t<b;
+ const previous=DAY_NAMES[(DAY_NAMES.indexOf(f.day)+6)%7];
+ return (d.days.includes(f.day)&&t>=a)||(d.days.includes(previous)&&t<b);
+}
+function safeURL(value){try{const u=new URL(value);return u.protocol==='https:'||u.protocol==='http:'?u.href:'';}catch{return '';}}
+</script>
+<script>
+/* YOUR SETTINGS — edit only the values between quotation marks.
+   1. Publish a separate, confirmed-deals Google Sheet as CSV.
+   2. Paste the published CSV URL into SHEET_CSV_URL below.
+   Required column headers:
+   Category, Restaurant, Deal, Price, Days, Hours, Neighbourhood, Last checked
+   Optional: Status, Source URL, Conditions, Address, Start time, End time
+   Days: Tuesday OR Monday, Wednesday OR Monday–Friday OR Daily.
+   Hours: 17:00–19:00 OR 5–7 PM OR All day. Use 24-hour times for clarity.
+   Use one row per offer, location and continuous schedule.
+   If a Status column exists, only rows marked Confirmed will appear.
+   Without Status, every nonblank restaurant row is treated as public.
+   Never put passwords or private account details in this file or public sheet.
+*/
+const SHEET_CSV_URL = "";
+const SUBMISSION_FORM_URL = "";
+
+// Fictional examples are shown ONLY while SHEET_CSV_URL is empty.
+const EXAMPLE_ROWS=[
+ {restaurant:'Example Oyster Bar',category:'Oysters',deal:'Happy-hour oysters',price:'$1 each',days:'Tuesday',hours:'17:00–19:00',neighbourhood:'Plateau','last checked':'',conditions:'Example only · with a drink purchase'},
+ {restaurant:'Example Taqueria',category:'Tacos',deal:'Taco Tuesday',price:'$3 each',days:'Tuesday',hours:'16:00–21:00',neighbourhood:'Plateau','last checked':'',conditions:'Example only · selected tacos'},
+ {restaurant:'Example Pizza Club',category:'Pizza',deal:'Margherita night',price:'$12',days:'Wednesday',hours:'17:00–21:00',neighbourhood:'Mile End','last checked':'',conditions:'Example only · dine-in'},
+ {restaurant:'Example Neighbourhood Pub',category:'Wings',deal:'Wing special',price:'Half price',days:'Tuesday',hours:'18:00–22:00',neighbourhood:'Downtown','last checked':'',conditions:'Example only · with a drink purchase'},
+ {restaurant:'Example Burger Spot',category:'Burgers',deal:'Burger night',price:'$10',days:'Thursday',hours:'12:00–20:00',neighbourhood:'Verdun','last checked':'',conditions:'Example only · burger only'},
+ {restaurant:'Example Late-Night Kitchen',category:'Other',deal:'Late-night snack special',price:'$6',days:'Friday, Saturday',hours:'22:00–02:00',neighbourhood:'Little Italy','last checked':'',conditions:'Example only · selected snacks'}
+];
+const $=id=>document.getElementById(id);
+let deals=[];
+const escapeHTML=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function setOptions(id,values){const select=$(id);while(select.options.length>1)select.remove(1);values.forEach(v=>{const option=document.createElement('option');option.value=v;option.textContent=v;select.append(option);});}
+function render(){
+ const filters={query:$('search').value.trim(),area:$('area').value,day:$('day').value,time:$('time').value,category:$('category').value};
+ const found=deals.filter(d=>matchesDeal(d,filters));
+ $('count').textContent=`${found.length} ${SHEET_CSV_URL?'':'example '}${found.length===1?'deal':'deals'} found`;
+ $('empty').hidden=found.length>0;
+ $('results').innerHTML=found.map(d=>{
+  const source=safeURL(d.source),map=d.address?'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(d.restaurant+', '+d.address+', Montreal'):'';
+  return `<article class="deal-card"><div class="card-top"><span class="category">${escapeHTML(d.category||'Other')}</span><span class="area">${escapeHTML(d.area||'Montreal')}</span></div><h3>${escapeHTML(d.restaurant)}</h3><p class="deal-name">${escapeHTML(d.deal)}</p><p class="price">${escapeHTML(d.price||'See venue for pricing')}</p><dl class="details"><div class="detail"><dt>When</dt><dd>${escapeHTML(d.dayLabel||'Confirm with venue')}</dd></div><div class="detail"><dt>Hours</dt><dd>${escapeHTML(d.hours||'Confirm with venue')}</dd></div>${d.address?`<div class="detail"><dt>Where</dt><dd>${escapeHTML(d.address)}</dd></div>`:''}</dl>${d.conditions?`<p class="conditions">${escapeHTML(d.conditions)}</p>`:''}<div class="card-foot"><span>${map?`<a href="${escapeHTML(map)}" target="_blank" rel="noopener noreferrer">View map ↗</a>`:''}${map&&source?' · ':''}${source?`<a href="${escapeHTML(source)}" target="_blank" rel="noopener noreferrer">Deal source ↗</a>`:''}</span><small>${d.checked?'Checked '+escapeHTML(d.checked):(SHEET_CSV_URL?'Check with venue':'Fictional example')}</small></div></article>`;
+ }).join('');
+}
+function clearFilters(){$('filter-form').reset();render();}
+async function loadDeals(){
+ $('load-error').hidden=true;$('empty').hidden=true;$('filter-form').hidden=false;$('notice').hidden=false;$('notice').textContent='Loading deals…';$('results').innerHTML='';$('count').textContent='';
+ try{
+  let rows;
+  if(!SHEET_CSV_URL){rows=EXAMPLE_ROWS;$('notice').textContent='Preview mode: these restaurants and offers are fictional examples. Real deals will appear once the public deal sheet is connected.';}
+  else{
+   const url=safeURL(SHEET_CSV_URL);if(!url)throw Error('Invalid data URL');
+   const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),15000);
+   try{const response=await fetch(url,{signal:controller.signal,cache:'no-store',credentials:'omit'});if(!response.ok)throw Error('Data unavailable');rows=parseCSV(await response.text());}finally{clearTimeout(timer);}
+   $('notice').hidden=true;
+  }
+  deals=rows.filter(r=>r.restaurant?.trim()&&(!Object.hasOwn(r,'status')||fold(r.status)==='confirmed')).map(normalizeDeal).sort((a,b)=>a.restaurant.localeCompare(b.restaurant,'en'));
+  setOptions('area',[...new Set(deals.map(d=>d.area).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'en')));
+  setOptions('category',[...new Set(deals.map(d=>d.category).filter(Boolean))].sort());render();
+ }catch(error){deals=[];$('notice').hidden=true;$('filter-form').hidden=true;$('load-error').hidden=false;$('empty').hidden=true;$('count').textContent='';console.error('Olive directory:',error.message);}
+}
+$('filter-form').addEventListener('submit',event=>event.preventDefault());
+$('filter-form').addEventListener('input',render);
+$('filter-form').addEventListener('reset',()=>setTimeout(render,0));
+$('reset-empty').addEventListener('click',clearFilters);$('retry').addEventListener('click',loadDeals);
+const formURL=safeURL(SUBMISSION_FORM_URL);if(formURL){$('submit-link').href=formURL;$('submit-link').hidden=false;}
+loadDeals();
+</script>
+</body>
+</html>
