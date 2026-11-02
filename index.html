@@ -50,9 +50,11 @@ function parseCSV(text){
  if(quoted)throw Error('Unclosed CSV quote');
  row.push(field);if(row.some(v=>v.trim()))rows.push(row);
  if(!rows.length)return [];
- const heads=rows.shift().map(h=>fold(h.replace(/^\uFEFF/,'')));
- for(const key of ['restaurant','category','deal','price','days','hours','neighbourhood','last checked'])if(!heads.includes(key))throw Error('Missing column: '+key);
- return rows.map(r=>Object.fromEntries(heads.map((h,i)=>[h,r[i]??''])));
+ const required=['restaurant','category','deal','price','days','hours','neighbourhood','last checked'];
+ const headerIndex=rows.findIndex(r=>{const names=r.map(h=>fold(h.replace(/^\uFEFF/,'')));return required.every(key=>names.includes(key));});
+ if(headerIndex<0)throw Error('Missing column: expected the deal column headings');
+ const heads=rows[headerIndex].map(h=>fold(h.replace(/^\uFEFF/,'')));
+ return rows.slice(headerIndex+1).map(r=>Object.fromEntries(heads.map((h,i)=>[h,r[i]??''])));
 }
 function parseDays(text){
  const s=fold(text);if(/^(daily|every day|everyday|all days)$/.test(s))return [...DAY_NAMES];
@@ -103,7 +105,7 @@ function safeURL(value){try{const u=new URL(value);return u.protocol==='https:'|
    Without Status, every nonblank restaurant row is treated as public.
    Never put passwords or private account details in this file or public sheet.
 */
-const SHEET_CSV_URL = "";
+const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTBFOu9o7-AxmsHnbZhNQ0gSxGP4lGqSZ93Px4x74Z0X2d4mL7qP2ATNP_Fjb_9ViGodo4Ulou6D6ch/pub?gid=1529194117&single=true&output=csv";
 const SUBMISSION_FORM_URL = "";
 
 // Fictional examples are shown ONLY while SHEET_CSV_URL is empty.
@@ -123,6 +125,9 @@ function render(){
  const filters={query:$('search').value.trim(),area:$('area').value,day:$('day').value,time:$('time').value,category:$('category').value};
  const found=deals.filter(d=>matchesDeal(d,filters));
  $('count').textContent=`${found.length} ${SHEET_CSV_URL?'':'example '}${found.length===1?'deal':'deals'} found`;
+ $('empty').querySelector('h3').textContent=deals.length?'No deals match just yet.':'New deals are on the way.';
+ $('empty').querySelector('p').textContent=deals.length?'Try another day, time or neighbourhood.':'Olive is checking the details. Come back soon for confirmed specials.';
+ $('reset-empty').hidden=!deals.length;
  $('empty').hidden=found.length>0;
  $('results').innerHTML=found.map(d=>{
   const source=safeURL(d.source),map=d.address?'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(d.restaurant+', '+d.address+', Montreal'):'';
